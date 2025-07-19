@@ -123,3 +123,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@import "tailwindcss";
+
+@theme inline {
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}

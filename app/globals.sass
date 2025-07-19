@@ -1,0 +1,139 @@
+$black: #000
+$white: #fff
+$off-white: #acacac
+$primary: #43eb9f
+$border: #6a6a6a8d
+$text-1: #6a6a6a
+
+@mixin flex($j,$a,$d,$g)
+    display: flex
+    justify-content: $j
+    align-items: $a
+    flex-direction: $d
+    gap: $g
+
+body
+    overflow-x: hidden
+    background-color: $black
+
+.hero-section
+    background-color: $black
+    height: 100svh
+    color: $white
+    @include flex(center,center,row,0px)
+    overflow: hidden
+    width: 100vw
+    .hero-content
+        @include flex(center,center,column,10px)
+        .image
+            transition: .2 ease
+            border-radius: 100px
+            height: 100px
+            width: 100px
+            object-fit: cover
+            @media (max-width:600px)
+                width: 60px
+                height: 60px
+        h2
+            font-size: clamp(16px,4vw,30px)
+            color: $primary
+        h1
+            font-size: clamp(20px,4vw,60px)
+            margin-top: -16px
+            @media (max-width:600px)
+                margin-top: -6px
+            span
+                color: $white
+        .pretty-button-parent
+            margin-top: 10px
+            border-color: $border
+            cursor: pointer
+            width: 150px
+
+.about-section
+    padding: 25px
+    .select-none
+        text
+            &:nth-child(2)
+                stroke: $black !important
+            &:nth-child(3)
+                stroke: $text-1 !important
+    .about-jazib
+        max-width: 800px
+        text-align: center
+        margin-top: -30px
+        span
+            font-size: clamp(12px,3vw,30px)
+            color: $off-white
+
+.cards-parent
+    .card-block
+        background-color: #1e1e1e
+        @include flex(center,center,column,10px)
+        min-height: 200px !important
+        width: 200px !important
+        .img
+            border-radius: 5px
+            width: 100%
+            @include flex(center,center,row,0px)
+            svg
+                width: 100px
+                height: 100px
+
+.ai-power
+    height: 100svh
+    @include flex(space-between,center,column,10px)
+    padding: 20px 20px 70px 20px
+    position: relative
+    form
+        position: absolute
+        bottom: 20px
+        left: 20px
+        right: 20px
+        width: calc( 100% - 40px )
+        input
+            color: $white
+    .ai-res
+        color: $off-white
+        width: 100%
+        max-width: 560px
+    .header
+        @include flex(space-between,center,row,10px)
+        color: $off-white
+        width: 100%
+        max-width: 600px
+        img
+            width: 30px
+            height: 30px
+            border-radius: 100px
+        p
+            font-size: clamp(12px,3vw,16px)
+        svg
+            // margin-right: -6px
+    .chat
+        // background-color: pink
+        height: 100%
+        width: 100%
+
+// .oxpw
+//     height: 100svh
+//     overflow-x: overlay
+//     @include flex(flex-start,flex-start,row,0px)
+//     scroll-snap-type: x mandatory
+//     scroll-behavior: smooth
+//     &::-webkit-scrollbar
+//         display: none
+//     > div
+//         min-width: 100%
+//         scroll-snap-stop: always
+//         &:nth-child(2)
+//             scroll-snap-align: center
+//     .cards-parent
+//         overflow: hidden
+//     .overflow-y-main
+//         height: 100svh
+//         overflow-x: hidden
+//         overflow-y: overlay
+//         position: relative
+//         &::-webkit-scrollbar
+//             display: none
