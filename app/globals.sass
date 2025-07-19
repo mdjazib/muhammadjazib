@@ -48,37 +48,7 @@ body
             margin-top: 10px
             border-color: $border
             cursor: pointer
-            width: 150px
-
-.about-section
-    padding: 25px
-    .select-none
-        text
-            &:nth-child(2)
-                stroke: $black !important
-            &:nth-child(3)
-                stroke: $text-1 !important
-    .about-jazib
-        max-width: 800px
-        text-align: center
-        margin-top: -30px
-        span
-            font-size: clamp(12px,3vw,30px)
-            color: $off-white
-
-.cards-parent
-    .card-block
-        background-color: #1e1e1e
-        @include flex(center,center,column,10px)
-        min-height: 200px !important
-        width: 200px !important
-        .img
-            border-radius: 5px
-            width: 100%
-            @include flex(center,center,row,0px)
-            svg
-                width: 100px
-                height: 100px
+            width: 170px
 
 .ai-power
     height: 100svh
@@ -115,25 +85,3 @@ body
         height: 100%
         width: 100%
 
-// .oxpw
-//     height: 100svh
-//     overflow-x: overlay
-//     @include flex(flex-start,flex-start,row,0px)
-//     scroll-snap-type: x mandatory
-//     scroll-behavior: smooth
-//     &::-webkit-scrollbar
-//         display: none
-//     > div
-//         min-width: 100%
-//         scroll-snap-stop: always
-//         &:nth-child(2)
-//             scroll-snap-align: center
-//     .cards-parent
-//         overflow: hidden
-//     .overflow-y-main
-//         height: 100svh
-//         overflow-x: hidden
-//         overflow-y: overlay
-//         position: relative
-//         &::-webkit-scrollbar
-//             display: none
